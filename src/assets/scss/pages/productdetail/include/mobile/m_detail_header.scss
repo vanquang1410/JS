@@ -1,0 +1,86 @@
+.m_detail-header {
+    position: fixed;
+    border-bottom: 1px solid rgb(239, 239, 239);
+    z-index: 10;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 20000;
+    
+    .m_d-inner-top {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        padding: 0px 16px;
+        height: 56px;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        background-color: #222232;
+        
+        .left-header {
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+
+            img {
+                padding: 6px;
+                border-radius: 20px;
+                width: 32px;
+                height: 32px;
+                background: rgba(36, 36, 36, 0.5);
+            }
+        }
+        
+        .title-header {
+            color: rgb(255, 255, 255);
+            font-size: 17px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex: 1 1 0%;
+            text-align: center;
+            padding-right: 20px;
+        }
+
+        .right-header {
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+
+            .img-cart1 {
+                padding: 6px;
+                border-radius: 20px;
+                background: rgba(36, 36, 36, 0.5);
+            }
+
+            span {
+                display: block;
+                position: absolute;
+                z-index: 1;
+                top: 7px;
+                right: 13px;
+                width: 16px;
+                height: 16px;
+                font-size: 11px;
+                line-height: 16px;
+                background-color: #fff;
+                color: black;
+                border-radius: 50%;
+                text-align: center;
+            }
+
+            .more-wrapper {
+                position: relative;
+
+                img {
+                    padding: 6px;
+                    border-radius: 20px;
+                    width: 32px;
+                    height: 32px;
+                    margin-left: 6px;
+                    background: rgba(36, 36, 36, 0.5);
+                }
+            }
+        }
+    }
+}

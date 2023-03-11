@@ -1,0 +1,30 @@
+.ModalCategoryMobile {
+    position: fixed;
+    inset: 0px;
+    background-color: rgba(39, 39, 42, 0.7);
+    z-index: 150;
+    overflow-y: auto;
+    height: 100%;
+
+    .modal-content {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 47.5px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        outline: none;
+        background: rgb(255, 255, 255);
+        color: rgb(56, 56, 61);
+        min-height: initial;
+        max-height: initial;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        height: calc((100% - 36px) - 47.5px);
+    }
+}
+
+// Login Modal //
+

@@ -1,0 +1,156 @@
+.home-category {
+    background: white;
+    margin: 30px 0px 0px;
+    border-radius: 4px;
+    padding-top: 10px;
+
+    .header {
+        font-size: 20px;
+        line-height: 28px;
+        padding: 10px 16px;
+        text-transform: capitalize;
+        font-weight: initial;
+    }
+
+    .body {
+        margin: 10px 0px 0px;
+
+        @media (max-width: 1024px) {
+            .body-slide--list {
+                gap: 12px 5px;
+            }
+        }
+
+        &-slide {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+            padding-top: 7px;
+
+            &--list {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(10, 1fr);
+                grid-template-rows: 1fr;
+                gap: 12px 8px;
+
+                .item {
+                    display: flex;
+                    flex-direction: column;
+                    -webkit-box-align: center;
+                    align-items: center;
+                    color: rgb(36, 36, 36);
+
+                    img {
+                        border-radius: 20px;
+                        overflow: hidden;
+                        width: 60px;
+                        height: 60px;
+                        object-fit: contain;
+
+                        --s: 60px;
+                        /* the size of the image */
+                        aspect-ratio: 1;
+                        outline: 1px solid rgba(255, 255, 255, 0.8);
+                        outline-offset: calc(var(--s)/-2);
+                        cursor: pointer;
+                        transition: 0.3s;
+                        border-radius: 50%;
+                    }
+
+                    img:hover {
+                        outline: 2px solid #4ECDC4;
+                        outline-offset: 4px;
+                    }
+
+                    // img::before{
+                    //   content: '';
+                    //   position: absolute;
+                    //   top: 50%;
+                    //   left: 50%;
+                    //   width: 60px;
+                    //   height: 60px;
+                    //   opacity: .6;
+                    //   background-color: var(--color-4);
+                    //   border-radius: 50%;
+                    //   -ms-border-radius: 50%;
+                    //   -webkit-border-radius: 50%;
+                    //   -moz-border-radius: 50%;
+                    //   -ms-border-radius: 50%;
+                    //   -o-border-radius: 50%;
+                    //   transform: translate(-50%,-50%);
+                    //   z-index: -1;
+                    //   box-shadow: 4px 4px 60px rgb(100 69 237 / 37%);
+                    // }
+
+                    h3 {
+                        text-align: center;
+                        margin: 12px 0px 16px;
+                        padding: 0px 12px;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                        font-size: 13px;
+                        line-height: 20px;
+                        font-weight: initial;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1190px) {
+    .cm-width {
+        width: auto;
+
+        .home-category {
+            min-height: 96px;
+            width: 100%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            margin-top: 30px;
+            z-index: 2;
+            padding: 0px;
+            margin-bottom: 15px;
+
+            .header {
+                padding: 5;
+                margin-top: 20px;
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .body {
+                position: static;
+                overflow: auto;
+                margin: 0px;
+                white-space: nowrap;
+
+                &-slide--list {
+
+                    display: flex;
+                    width: 100%;
+                    overflow-x: auto;
+
+                    .item {
+                        text-align: center;
+                        display: block;
+                        text-decoration: none;
+                        padding: 8px;
+                        width: 22vw;
+                        height: 96px;
+
+                        img {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,55 @@
+@import "./colors";
+
+$themes: (
+  bgBody: (
+    darkTheme: $bgBodyDark,
+    lightTheme: $white
+  ),
+  bgCardProduct: (
+    darkTheme: $bgCardProductDark,
+    lightTheme: $bgCardProductLight
+  ),
+  textColor: (
+    darkTheme: $bgCardProductLight,
+    lightTheme: $black
+  ),
+  bgHeader:(
+    darkTheme: $black,
+    lightTheme: $bgHeaderLight
+  ),
+  bgBtnMode:(
+    darkTheme: $bgbtnModeDark,
+    lightTheme: $bgbtnMode
+  ),
+  bgFooter:(
+    darkTheme: $black,
+    lightTheme: $bgFooterLight
+  ),
+
+  bgCategory:(
+    darkTheme: $black,
+    lightTheme: $white
+  )
+
+);
+
+@mixin styles($mode) {
+    @each $key, $map in $themes {
+      @each $prop, $color in $map {
+        @if $prop == $mode {
+          --#{$key}: #{$color};
+        }
+      }
+    }
+  }
+
+  .dark-mode {
+    @include styles("darkTheme");
+  }
+  
+  .light-mode {
+    @include styles("lightTheme");
+  }
+  
+
+

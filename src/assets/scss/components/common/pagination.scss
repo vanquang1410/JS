@@ -1,0 +1,82 @@
+.pagination-container {
+    padding: 0px;
+    margin: 30px 0px 16px;
+    display: flex;
+    gap: 16px;
+    -webkit-box-pack: center;
+    justify-content: center;
+
+    .pagination-item {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 36px;
+        color: rgb(128, 128, 137);
+        text-decoration: none;
+        border-radius: 4px;
+        width: 40px;
+        height: 36px;
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+
+        &.dots:hover {
+            cursor: none;
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.04);
+            cursor: pointer;
+        }
+
+        &.selected {
+            background: rgb(11, 116, 229);
+            color: rgb(255, 255, 255);
+        }
+
+        .arrow {
+            &::before {
+                position: relative;
+                /* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+                content: '';
+                /* By using an em scale, the arrows will size with the font */
+                display: inline-block;
+                width: 0.4em;
+                height: 0.4em;
+                border-right: 0.12em solid rgba(0, 0, 0, 0.87);
+                border-top: 0.12em solid rgba(0, 0, 0, 0.87);
+            }
+
+            &.left {
+                transform: rotate(-135deg) translate(-50%);
+            }
+
+            &.right {
+                transform: rotate(45deg);
+            }
+        }
+
+        &.disabled {
+            pointer-events: none;
+
+            .arrow::before {
+                border-right: 0.12em solid rgba(0, 0, 0, 0.43);
+                border-top: 0.12em solid rgba(0, 0, 0, 0.43);
+            }
+
+            &:hover {
+                background-color: transparent;
+                cursor: default;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .pagination-container {
+        gap: 5px;
+    }
+}

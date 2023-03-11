@@ -1,0 +1,30 @@
+.viewed {
+    width: 1240px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+    background-color: white;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    h2 {
+        color: rgb(78, 58, 58);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        padding: 8px 15px;
+        text-transform: capitalize;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        align-items: center;
+        margin: 0px;
+    }
+}

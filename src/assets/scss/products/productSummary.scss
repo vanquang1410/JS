@@ -1,0 +1,234 @@
+.dashboard-product--item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    margin-bottom: 20px;
+
+    .product-item {
+        text-decoration: none;
+        width: 200px;
+        position: relative;
+        cursor: pointer;
+        background-color: white;
+        margin-right: 2px;
+
+        &:hover {
+            box-shadow: rgb(0 0 0 / 10%) 0px 0px 20px;
+            z-index: 1;
+        }
+
+        &--style {
+            display: flex;
+            padding: 12px;
+            color: rgb(56, 56, 61);
+            text-decoration: none;
+            flex-direction: column;
+            -webkit-box-pack: justify;
+            width: 100%;
+            height: 100%;
+
+            .thumbnail {
+                flex-shrink: 0;
+                text-align: center;
+                position: relative;
+                width: 100%;
+
+                &--icon-badge {
+                    bottom: 0;
+                    left: 0;
+                    display: block;
+                    position: absolute;
+                    z-index: 2;
+
+                    img {
+                        width: 136px;
+                        height: 24px;
+                    }
+                }
+
+                &--product-img {
+                    position: relative;
+                    width: 100%;
+                    // padding-bottom: 100%;
+
+                }
+            }
+
+            .infor {
+                .badge-service {
+                    margin-bottom: 8px;
+                    margin-top: 12px;
+                }
+
+                .name {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+
+                    h3 {
+                        font-weight: 400;
+                        font-size: 12px !important;
+                        line-height: 16px;
+                        color: rgb(56, 56, 61);
+                        margin: 0px;
+                        word-break: break-word;
+                    }
+                }
+
+                .price-discount {
+                    display: flex;
+                    -webkit-box-align: center;
+                    align-items: center;
+                    margin-top: 4px;
+                    color: rgb(56, 56, 61);
+
+                    &__price {
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: 500;
+                        color: rgb(56, 56, 61);
+                    }
+                }
+
+                .has-discount {
+                    color: rgb(255, 66, 78);
+
+                    .price-discount__discount {
+                        padding: 0px 2px;
+                        line-height: 14px;
+                        font-size: 12px;
+                        font-weight: 400;
+                        margin-left: 8px;
+                        border: 1px solid rgb(255, 66, 78);
+                        border-radius: 2px;
+                        background-color: rgb(255, 240, 241);
+                        color: rgb(255, 66, 78);
+                    }
+                }
+
+                .badge-benefit {
+                    margin-top: 8px;
+                }
+
+                .badge-add-info {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-top: 8px;
+                }
+
+                .deal {
+                    text-align: left;
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 500;
+                    color: rgb(56, 56, 61);
+                    margin: 8px 0px 12px;
+                    display: flex;
+                    -webkit-box-align: center;
+                    align-items: center;
+                    white-space: nowrap;
+                }
+
+                .deal-quty {
+                    background-color: rgb(255, 170, 175);
+                    color: rgb(255, 255, 255);
+                    border-radius: 10px;
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    height: 20px;
+
+                    .deal-progress {
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                        background-color: rgb(255, 66, 78);
+                        height: 20px;
+                        border-radius: 10px;
+                        min-width: 20px;
+
+
+                        width: 84%;
+
+                        span {
+                            font-size: 11px;
+                            line-height: 16px;
+                            padding: 0px 0px 0px 6px;
+                            display: flex;
+                            -webkit-box-align: center;
+                            align-items: center;
+                            -webkit-box-pack: center;
+                            justify-content: center;
+                            height: 100%;
+                            width: 100%;
+                            position: absolute;
+                            text-align: center;
+                        }
+
+                        img {
+                            z-index: 10;
+                            position: absolute;
+                            width: 24px;
+                            height: 24px;
+                            bottom: 4px;
+                            left: 5px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        position: relative;
+    }
+}
+
+.not-style {
+    justify-content: space-between;
+}
+
+.swiper-slide {
+    display: flex;
+}
+.review-user-content {
+    width: 70%;
+}
+.lists-comment  {
+    ul {
+        li {
+            list-style: none;
+            p {
+                background-color: rgb(250, 250, 250);
+                border: 1px solid rgb(242, 242, 242);
+                padding: 10px 12px;
+                display: flex;
+                span {
+                    &:first-child {
+                        width: 35px;
+                        height: 35px;
+                        background: #ddd;
+                        margin-right: 7px;
+                        text-align: center;
+                        color: #666;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        line-height: 35px;
+                        border-radius: 50%;
+                        font-weight: 600;
+                        text-shadow: 1px 1px 0 rgb(255 255 255 / 20%);
+                    }
+                }
+                b {
+                    color: rgb(128, 128, 137);
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

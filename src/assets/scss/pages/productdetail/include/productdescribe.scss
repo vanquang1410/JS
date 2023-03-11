@@ -1,0 +1,78 @@
+.describe-container {
+    display: flex;
+
+    .des-left {
+        flex: 1 1 0%;
+
+        .left-group {
+            
+            width: calc(100% - 300px);
+            margin-bottom: 16px;
+            border-radius: 4px;
+            background-color: rgb(255, 255, 255);
+
+            @media (max-width: 1024px) {
+                width: 100%; 
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+
+            h2 {
+                color: rgb(51, 51, 51);
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 32px;
+                padding: 8px 16px;
+                text-transform: capitalize;
+                display: flex;
+                -webkit-box-pack: justify;
+                justify-content: space-between;
+                -webkit-box-align: center;
+                align-items: center;
+                margin: 0px;
+            }
+
+            .group-content {
+                width: 920px;
+                padding: 0px 16px 16px;
+                display: inline-block;
+                color: rgb(36, 36, 36);
+                text-align: justify;
+                border-radius: 4px;
+
+                @media (max-width: 1024px) {
+                    flex-direction: column;
+                    width: 100%; 
+                    position: relative;
+                }
+
+                button {
+                    cursor: pointer;
+                    padding: 6px 11px;
+                    border-radius: 4px;
+                    border: 1px solid rgb(13, 92, 182);
+                    color: rgb(13, 92, 182);
+                    font-size: 13px;
+                    margin-left: 410px;
+                }
+                button:hover {
+                    cursor: pointer;
+                    border-radius: 4px;
+                    border: 1px solid rgb(13, 92, 182);
+                    color: #fff;
+                    background-color: rgb(13, 92, 182);
+                }
+            }
+        }
+
+        .des-right {
+            width: 300px;
+            margin-left: 20px;
+            padding-top: 30px;
+
+            @media (max-width: 1024px) {
+                display: none;
+            }
+        }
+    }
+}
